@@ -1,3 +1,5 @@
+library("colortools")
+
 # constants
 xSize = 11
 ySize = 11
@@ -34,7 +36,11 @@ for (i in xseq) {
     y <- c(0+j+hyst[5], 0+j+hyst[6], 1+j+hyst[7], 1+j+hyst[8])
     
     # plot polygon
-    polygon(x, y, col = sequential("deepskyblue", plot = FALSE)[color_idx])
+    polygon(
+      x, y, 
+      col = sequential("deepskyblue", plot = FALSE)[color_idx],
+      # border = NA
+    )
   }
 }
 
